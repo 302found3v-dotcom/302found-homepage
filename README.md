@@ -1,6 +1,40 @@
-# Astro Starter Kit: Minimal
+# 302Found Homepage
 
-<!-- Note: Created branch named 'main' and pushed to remote -->
+Homepage oficial del proyecto 302Found desarrollada con Astro.
+
+## 🌳 Ramas de Desarrollo
+
+- **`main`**: Rama principal de producción
+- **`deni-dev`**: Rama de desarrollo activa - ¡Nuevos features y mejoras aquí! 🚀
+
+> **Nota para desarrolladores**: Para contribuir al proyecto, crea tu rama desde `deni-dev` y haz merge requests hacia la misma rama de desarrollo.
+
+## 🔄 Flujo de Trabajo con Git
+
+1. **Clona el repositorio:**
+   ```bash
+   git clone git@github.com:302foundevx/302found-homepage.git
+   ```
+
+2. **Cambia a la rama de desarrollo:**
+   ```bash
+   git checkout deni-dev
+   ```
+
+3. **Crea tu rama de feature:**
+   ```bash
+   git checkout -b feature/tu-nueva-funcionalidad
+   ```
+
+4. **Haz tus cambios y commitea:**
+   ```bash
+   git add .
+   git commit -m "feat: descripción de tu cambio"
+   ```
+
+5. **Push y crea un Pull Request hacia `deni-dev`**
+
+## 📦 Instalación
 
 ```sh
 pnpm create astro@latest -- --template minimal
