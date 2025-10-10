@@ -1,0 +1,22 @@
+/* global styles */
+
+html {
+  font-family: 'Onest Variable', sans-serif;
+  box-sizing: border-box;
+  color: #fff;
+  background-color: #202023;
+}
+
+main {
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 0 1rem 2rem 1rem;
+}
