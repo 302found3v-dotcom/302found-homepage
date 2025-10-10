@@ -2,6 +2,9 @@
 
 Homepage oficial del proyecto 302Found desarrollada con Astro.
 
+<img width="2498" height="627" alt="image" src="https://github.com/user-attachments/assets/f3646fdb-c57f-4b8b-912f-63d25272f02b" />
+
+
 ## 🌳 Ramas de Desarrollo
 
 - **`main`**: Rama principal de producción
