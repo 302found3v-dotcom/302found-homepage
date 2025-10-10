@@ -1,6 +1,7 @@
 ---
 import Patita from '/public/patita.svg'
 import GitHub from '/public/github.svg'
+import Sun from '/public/sun.svg'
 ---
 
 <header>
@@ -16,12 +17,12 @@ import GitHub from '/public/github.svg'
                 <li><a href="#projects">Work</a></li>
                 <li><a href="/wallpapers">Wallpapers</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="#source"><span class="source"><GitHub />Source</span></a></li>
+                <li><a href="https://github.com/302foundevx/302found-homepage" rel="noopener norreferer"><span class="source"><GitHub />Source</span></a></li>
             </ul>
         </div>
 
-        <div>
-            <button>LIGHT</button>
+        <div class="theme">
+            <button><Sun /></button>
         </div>
     </nav>
 </header>
@@ -37,14 +38,19 @@ import GitHub from '/public/github.svg'
         margin: 0 auto;
     }
 
-    button {
-        background: none;
-        border: 1px solid currentColor;
-        padding: .3rem .8rem;
-        border-radius: 5px;
+    .theme {
+        display: flex;
+        align-items: center;
+    }
+
+    .theme button {
+        display: flex;
+        border: none;
+        padding: .5rem .6rem;
+        border-radius: .375rem;
         cursor: pointer;
-        font-weight: bold;
-        color: aliceblue;
+        color: #202023;
+        background-color: rgb(251, 212, 141);
     }
 
     .marker {

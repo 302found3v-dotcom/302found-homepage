@@ -1,33 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
-    <link href="css/style.css" rel="stylesheet">
-  </head>
-  <body>
-  
-    <main>
-      <h1>Hello World.</h1>
-      
-    </main>
+---
 
-  </body>
-</html>
+---
+
+
+<section class="section">
+
+  <div class="hero">
+    <span>Hello, I'm an indie app developer based in Madrid!</span>
+  </div>
+
+  <div class="craft">
+    <div>
+      <h1>Juan Alberto</h1>
+      <p>Digital Craftsman ( Artist / Developer / C-Creator )</p>
+    </div>
+
+    <img src="/public/pic.webp" alt="Juan Alberto Picture" />
+  </div>
+
+</section>
 
 <style>
-  main {
-    display: flex;
+
+  .section {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 1rem;
+    margin: 5rem auto;
   }
 
-  h1 {
-    font-size: 4rem;
-    font-weight: bold;
+  .section, .hero {
+    width: 100%;
+    display: flex;
   }
+
+  .hero {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero span {
+    width: 100%;
+    text-align: center;
+    border-radius: .5rem;
+    background-color: rgba(49,49,52,1);
+    padding: 0.75rem;
+  }
+
+  .craft {
+    align-items: center;
+    margin-top: 1.5rem;
+    justify-content: space-between;
+    display: flex;
+  }
+
+  .craft h1 {
+    font-size: 2.3rem;
+  }
+
+  .craft p, .craft h1 {
+    margin: 0;
+  }
+
+  .craft img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    object-fit: cover;
+  }
+
 </style>
