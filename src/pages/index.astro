@@ -11,9 +11,17 @@ import Footer from "../sections/Footer.astro"
 
     <Header />
 
-    <section>
-      <Hero />
-      <Footer />
-    </section>
+    <main class="container">
+      <section>
+        <Hero />
+        <Footer />
+      </section>
+    </main>
 
 </Layout>
+
+<style>
+  .container section {
+    width: 600px;
+  }
+</style>
