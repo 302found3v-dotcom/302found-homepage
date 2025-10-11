@@ -5,6 +5,7 @@ html {
   box-sizing: border-box;
   color: #fff;
   background-color: #202023;
+  text-wrap: balance;
 }
 
 .container {
