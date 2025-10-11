@@ -7,7 +7,7 @@ import Chevron from "/public/chevron.svg";
   <p class="description">
     I'm a Madrid-based application developer with a focus on building meaningful, user-centered digital experiences.
     My approach blends strong technical execution with thoughtful design, taking ideas from concept to fully deployed products.
-    I'm currently advancing my skills at <a target="_blank" rel="noopener noreferrer" class="link-to" href="https://www.42madrid.com/">42 Madrid</a>, a rigorous, peer-driven programming school that emphasizes real-world problem solving, autonomy, and collaboration — without teachers or traditional classes.
+    I'm currently advancing my skills at <a target="_blank" rel="noopener noreferrer" class="link-to" href="https://www.42madrid.com/">42 Madrid</a>, a rigorous, <i>peer-to-peer</i> programming school that emphasizes real-world problem solving.
     I also share my learning journey and project insights on my YouTube channel,
     "<a class="link-to" href="https://youtube.com/@lifeasadev">Life as Dev</a>".
   </p>
@@ -18,12 +18,12 @@ import Chevron from "/public/chevron.svg";
 
 <section class="bio">
   <h2 class="sub-head">Bio</h2>
-  <p><span>2001</span> Born in Barahona, Dominican Republic.</p>
+  <p class="desc"><span>2001</span> Born in Barahona, Dominican Republic.</p>
   <p>
     <span>2023</span> Earned the
     <a target="_blank" rel="noopener noreferrer" class="link-to" href="https://verified.elearnsecurity.com/certificates/6b4943a0-26a2-4ce7-8063-aff8e6bda825">eJPT (eLearnSecurity Junior Penetration Tester)</a>.
   </p>
-  <p>
+  <p class="desc">
     <span>2025</span>
     Currently studying at <a target="_blank" rel="noopener noreferrer" class="link-to" href="https://www.42madrid.com/">42 Madrid</a>,
     a cutting-edge programming school with a peer-to-peer, project-based learning model — no teachers, no classes, just real-world coding challenges.
@@ -106,8 +106,17 @@ import Chevron from "/public/chevron.svg";
         text-indent: 1.2rem;
     }
 
+    .desc {
+        padding-left: 3.4em;
+        text-indent: -3.4em;
+    }
+
     p, .description {
         margin: 0;
         line-height: 1.6;
+    }
+
+    .i-love p {
+        padding-left: 3.4rem;
     }
 </style>
