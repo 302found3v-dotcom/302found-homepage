@@ -2,70 +2,48 @@
 import Chevron from "/public/chevron.svg";
 ---
 
-<div>
-    <div class="work">
-        <h3 class="sub-head">Work</h3>
-        <p class="description">
-            Takuya is a freelance and a full-stack developer based in Madrid with a passion
-             for building digital services/stuff he wants. He has a knack for all things l
-             aunching products, from planning and designing all the way to solving real-life 
-             problems with code. When not online, he loves hanging out with his camera. 
-             Currently, he is living off of his own product called <a class="link-to" href="/#42-madrid-profile">302Found</a>. 
-             He publishes content for marketing his products and his YouTube channel 
-             called "<a class="link-to" href="https://youtube.com">Life as Dev</a>" has more than 100k subscribers.
-        </p>
-        <a class="portfolio-button" href="/work">My portfolio<Chevron /></a>
-    </div>
+<section class="work">
+  <h2 class="sub-head">Work</h2>
+  <p class="description">
+    I'm a Madrid-based application developer with a focus on building meaningful, user-centered digital experiences.
+    My approach blends strong technical execution with thoughtful design, taking ideas from concept to fully deployed products.
+    I'm currently advancing my skills at <a target="_blank" rel="noopener noreferrer" class="link-to" href="https://www.42madrid.com/">42 Madrid</a>, a rigorous, peer-driven programming school that emphasizes real-world problem solving, autonomy, and collaboration — without teachers or traditional classes.
+    I also share my learning journey and project insights on my YouTube channel,
+    "<a class="link-to" href="https://youtube.com/@lifeasadev">Life as Dev</a>".
+  </p>
+  <a class="portfolio-button" href="/work">
+    My portfolio <Chevron />
+  </a>
+</section>
 
-    <div class="bio">
-        <h3 class="sub-head">Bio</h3>
-        <p>
-            <span>2001</span>
-            Born in Barahona, Dominican Republic.
-        </p>
-        <p>
-            <span>2023</span>
-            I passed my first ethical hacking certification and earned the <a class="link-to" href="https://verified.elearnsecurity.com/certificates/6b4943a0-26a2-4ce7-8063-aff8e6bda825">eJPT (eLearnSecurity Junior Penetration Tester)</a>.
-        </p>
-        <p>
-            <span>2025 in present</span>
-            Started at <a class="link-to" href="/https://www.42madrid.com/">42 Madrid</a>, a coding school promoted by <a class="link-to" href="https://www.fundaciontelefonica.com/">Fundación Telefónica España</a> with no teachers.
-        </p>
-    </div>
+<section class="bio">
+  <h2 class="sub-head">Bio</h2>
+  <p><span>2001</span> Born in Barahona, Dominican Republic.</p>
+  <p>
+    <span>2023</span> Earned the
+    <a target="_blank" rel="noopener noreferrer" class="link-to" href="https://verified.elearnsecurity.com/certificates/6b4943a0-26a2-4ce7-8063-aff8e6bda825">eJPT (eLearnSecurity Junior Penetration Tester)</a>.
+  </p>
+  <p>
+    <span>2025</span>
+    Currently studying at <a target="_blank" rel="noopener noreferrer" class="link-to" href="https://www.42madrid.com/">42 Madrid</a>,
+    a cutting-edge programming school with a peer-to-peer, project-based learning model — no teachers, no classes, just real-world coding challenges.
+    Promoted by <a target="_blank" rel="noopener noreferrer" class="link-to" href="https://www.fundaciontelefonica.com/">Fundación Telefónica España</a> and focuses on autonomy, collaboration, and problem-solving.
+  </p>
+</section>
 
-    <div class="i-love">
-        <h3 class="sub-head">I ♥</h3>
-        <p>Art, Music, Photography, Traveling, Coffee, Animals, Nature, Technology, Startups, Entrepreneurship, Coding, Open Source, Learning new things.</p>
-    </div>
-</div>
+<section class="i-love">
+  <h2 class="sub-head">I ♥</h2>
+  <p>Art, music, and photography. Traveling, coffee, and nature. Technology, startups, open source, and continuous learning.</p>
+</section>
 
 <style>
-    .bio {
-        text-indent: -3.3rem;
-    }
-
-    .bio, .i-love p {
-        padding-left: 3.4rem;
-    }
-
-    .bio span {
-        font-weight: 600;
-        margin-right: .6rem;
-    }
-
-    .work, .bio, .i-love {
+    section {
         margin-bottom: 2.5rem;
-    }
-
-    .bio, .i-love, .work {
-        gap: .8rem;
-    }
-
-    .i-love, .bio, .work {
         display: flex;
         flex-direction: column;
+        gap: 0.8rem;
     }
-    
+
     .sub-head {
         margin: 0;
         font-size: 1.2rem;
@@ -79,13 +57,7 @@ import Chevron from "/public/chevron.svg";
     .description {
         text-indent: 1.5rem;
         font-weight: 300;
-        margin-bottom: .5rem;
-        line-height: 1.6;
-    }
-
-    p {
-        line-height: 1.6;
-        margin: 0;
+        margin-bottom: 0.5rem;
     }
 
     .link-to {
@@ -100,25 +72,42 @@ import Chevron from "/public/chevron.svg";
     .portfolio-button {
         display: flex;
         align-items: center;
-        gap: .4rem;
-        background-color: #81E6D9;
+        gap: 0.4rem;
+        background-color: #81e6d9;
         color: black;
         text-decoration: none;
-        width: 150px;
-        height: 40px;
+        padding: 0.6rem 1rem;
+        width: fit-content;
+        min-width: 150px;
         justify-content: center;
-        border-radius: .5rem;
+        border-radius: 0.5rem;
         margin: auto;
-        transition: background-color .3s;
+        transition: background-color 0.3s;
         font-weight: 500;
     }
 
     .portfolio-button:hover {
-        background-color: #4FD1C5;
+        background-color: #4fd1c5;
+    }
+
+    .portfolio-button:hover svg {
+        transform: translateX(3px);
+        transition: transform 0.2s ease-in-out;
     }
 
     .portfolio-button svg {
         width: 16px;
         height: 16px;
+    }
+
+    span {
+        font-weight: 600;
+        margin-right: 0.6rem;
+        text-indent: 1.2rem;
+    }
+
+    p, .description {
+        margin: 0;
+        line-height: 1.6;
     }
 </style>
