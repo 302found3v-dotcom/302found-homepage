@@ -4,45 +4,69 @@ import Chevron from "/public/chevron.svg";
 
 <div>
     <div class="work">
-        <h3>Work</h3>
-        <p>
+        <h3 class="sub-head">Work</h3>
+        <p class="description">
             Takuya is a freelance and a full-stack developer based in Madrid with a passion
              for building digital services/stuff he wants. He has a knack for all things l
              aunching products, from planning and designing all the way to solving real-life 
              problems with code. When not online, he loves hanging out with his camera. 
-             Currently, he is living off of his own product called <a class="madrid-42" href="/#42-madrid-profile">302Found</a>. 
+             Currently, he is living off of his own product called <a class="link-to" href="/#42-madrid-profile">302Found</a>. 
              He publishes content for marketing his products and his YouTube channel 
-             called "<a class="yt-channel" href="/works/free">Life as Dev</a>" has more than 100k subscribers.
+             called "<a class="link-to" href="https://youtube.com">Life as Dev</a>" has more than 100k subscribers.
         </p>
         <a class="portfolio-button" href="/work">My portfolio<Chevron /></a>
     </div>
 
     <div class="bio">
-        <h3>Bio</h3>
+        <h3 class="sub-head">Bio</h3>
         <p>
-            Takuya is a freelance and a full-stack developer based in Osaka with a passion
-             for building digital services/stuff he wants. He has a knack for all things l
-             aunching products, from planning and designing all the way to solving real-life 
-             problems with code. When not online, he loves hanging out with his camera. 
-             Currently, he is living off of his own product called Inkdrop. 
-             He publishes content for marketing his products and his YouTube channel 
-             called "Dev as Life" has more than 100k subscribers.
+            <span>2001</span>
+            Born in Barahona, Dominican Republic.
         </p>
+        <p>
+            <span>2023</span>
+            I passed my first ethical hacking certification and earned the eJPT (eLearnSecurity Junior Penetration Tester).
+        </p>
+        <p>
+            <span>2025</span>
+            Started at <a class="link-to" href="/https://www.42madrid.com/">42 Madrid</a>, a coding school promoted by <a class="link-to" href="https://www.fundaciontelefonica.com/">Fundación Telefónica España</a> with no teachers.
+        </p>
+    </div>
+
+    <div class="i-love">
+        <h3 class="sub-head">I ♥</h3>
+        <p>Art, Music, Photography, Traveling, Coffee, Animals, Nature, Technology, Startups, Entrepreneurship, Coding, Open Source, Learning new things.</p>
     </div>
 </div>
 
 <style>
+    .bio {
+        text-indent: -3.3rem;
+    }
 
-    .work {
+    .bio, .i-love p {
+        padding-left: 3.4rem;
+    }
+
+    .bio span {
+        font-weight: 600;
+        margin-right: .6rem;
+    }
+
+    .work, .bio, .i-love {
+        margin-bottom: 2.5rem;
+    }
+
+    .bio, .i-love, .work {
+        gap: 1.2rem;
+    }
+
+    .i-love, .bio, .work {
         display: flex;
         flex-direction: column;
     }
-
-    .work, .bio {
-        margin-bottom: 3rem;
-    }
     
-    h3 {
+    .sub-head {
         margin: 0;
         font-size: 1.2rem;
         text-decoration: underline;
@@ -52,15 +76,23 @@ import Chevron from "/public/chevron.svg";
         line-height: 1.33;
     }
 
-    p {
-        line-height: 1.5;
+    .description {
+        line-height: 1.6;
         text-indent: 1.5rem;
         font-weight: 300;
     }
 
-    .madrid-42, .yt-channel {
+    p {
+        margin: 0;
+    }
+
+    .link-to {
         color: #ff63c3;
         text-decoration: none;
+    }
+
+    .link-to:hover {
+        text-decoration: underline;
     }
 
     .portfolio-button {
@@ -74,7 +106,7 @@ import Chevron from "/public/chevron.svg";
         height: 40px;
         justify-content: center;
         border-radius: .5rem;
-        margin: auto;
+        margin: 0 auto;
         transition: background-color .3s;
         font-weight: 500;
     }
