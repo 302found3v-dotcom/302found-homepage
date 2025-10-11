@@ -1,0 +1,90 @@
+---
+import Chevron from "/public/chevron.svg";
+---
+
+<div>
+    <div class="work">
+        <h3>Work</h3>
+        <p>
+            Takuya is a freelance and a full-stack developer based in Madrid with a passion
+             for building digital services/stuff he wants. He has a knack for all things l
+             aunching products, from planning and designing all the way to solving real-life 
+             problems with code. When not online, he loves hanging out with his camera. 
+             Currently, he is living off of his own product called <a class="madrid-42" href="/#42-madrid-profile">302Found</a>. 
+             He publishes content for marketing his products and his YouTube channel 
+             called "<a class="yt-channel" href="/works/free">Life as Dev</a>" has more than 100k subscribers.
+        </p>
+        <a class="portfolio-button" href="/work">My portfolio<Chevron /></a>
+    </div>
+
+    <div class="bio">
+        <h3>Bio</h3>
+        <p>
+            Takuya is a freelance and a full-stack developer based in Osaka with a passion
+             for building digital services/stuff he wants. He has a knack for all things l
+             aunching products, from planning and designing all the way to solving real-life 
+             problems with code. When not online, he loves hanging out with his camera. 
+             Currently, he is living off of his own product called Inkdrop. 
+             He publishes content for marketing his products and his YouTube channel 
+             called "Dev as Life" has more than 100k subscribers.
+        </p>
+    </div>
+</div>
+
+<style>
+
+    .work {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .work, .bio {
+        margin-bottom: 3rem;
+    }
+    
+    h3 {
+        margin: 0;
+        font-size: 1.2rem;
+        text-decoration: underline;
+        text-underline-offset: 6px;
+        text-decoration-color: #525252;
+        text-decoration-thickness: 4px;
+        line-height: 1.33;
+    }
+
+    p {
+        line-height: 1.5;
+        text-indent: 1.5rem;
+        font-weight: 300;
+    }
+
+    .madrid-42, .yt-channel {
+        color: #ff63c3;
+        text-decoration: none;
+    }
+
+    .portfolio-button {
+        display: flex;
+        align-items: center;
+        gap: .4rem;
+        background-color: #81E6D9;
+        color: black;
+        text-decoration: none;
+        width: 150px;
+        height: 40px;
+        justify-content: center;
+        border-radius: .5rem;
+        margin: auto;
+        transition: background-color .3s;
+        font-weight: 500;
+    }
+
+    .portfolio-button:hover {
+        background-color: #4FD1C5;
+    }
+
+    .portfolio-button svg {
+        width: 16px;
+        height: 16px;
+    }
+</style>
