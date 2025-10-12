@@ -43,11 +43,11 @@ import YouTube from "../components/YouTube.astro";
 <section class="on-the-web">
     <h2 class="sub-head">On the web</h2>
     <p>
-        You can find me on
-        <a target="_blank" rel="noopener noreferrer" href="https://github.com/302foundevx"><GitHub /> @302foundevx</a>
-        <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/302foundev/"><LinkedIn /> @302foundev</a>
-        <a target="_blank" rel="noopener noreferrer" href="https://x.com/302foundev"><X /> @302foundev</a>
-        <a target="_blank" rel="noopener noreferrer" href="https://youtube.com/@lifeasadev"><YouTube /> @life as dev</a
+        <span>You can find me on</span>
+        <a class="on-the-web-button" target="_blank" rel="noopener noreferrer" href="https://github.com/302foundevx"><GitHub /> @302foundevx</a>
+        <a class="on-the-web-button" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/302foundev/"><LinkedIn /> @302foundev</a>
+        <a class="on-the-web-button" target="_blank" rel="noopener noreferrer" href="https://x.com/302foundev"><X /> @302foundev</a>
+        <a class="on-the-web-button" target="_blank" rel="noopener noreferrer" href="https://youtube.com/@lifeasadev"><YouTube /> @life as dev</a>
 </section>
 
 <style>
@@ -139,7 +139,13 @@ import YouTube from "../components/YouTube.astro";
         flex-direction: column;
     }
 
-    .on-the-web a {
+    .on-the-web span {
+        margin-bottom: 1.5rem;
+        text-indent: 0;
+        font-weight: 300;
+    }
+
+    .on-the-web-button {
         border-radius: 7px;
         width: fit-content;
         padding: 0.4rem 1.5rem;
@@ -152,12 +158,12 @@ import YouTube from "../components/YouTube.astro";
         gap: 0.3rem;
     }
 
-    .on-the-web a:hover {
-        background-color: rgba(129, 230, 217, 0.3);
+    .on-the-web-button:hover {
+        background-color: rgba(129, 230, 217, 0.2);
         transition: background-color 0.3s, color 0.3s;
     }
 
-    .on-the-web a svg {
+    .on-the-web-button svg {
         fill: #81E6D9;
     }
 </style>
