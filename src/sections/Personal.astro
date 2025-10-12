@@ -1,5 +1,9 @@
 ---
 import Chevron from "/public/chevron.svg";
+import GitHub from "../components/GitHub.astro";
+import LinkedIn from "../components/LinkedIn.astro";
+import X from "../components/X.astro";
+import YouTube from "../components/YouTube.astro";
 ---
 
 <section class="work">
@@ -34,6 +38,16 @@ import Chevron from "/public/chevron.svg";
 <section class="i-love">
   <h2 class="sub-head">I ♥</h2>
   <p>Art, music, and photography. Traveling, coffee, and nature. Technology, startups, open source, and continuous learning.</p>
+</section>
+
+<section class="on-the-web">
+    <h2 class="sub-head">On the web</h2>
+    <p>
+        You can find me on
+        <a target="_blank" rel="noopener noreferrer" href="https://github.com/302foundevx"><GitHub /> @302foundevx</a>
+        <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/302foundev/"><LinkedIn /> @302foundev</a>
+        <a target="_blank" rel="noopener noreferrer" href="https://x.com/302found"><X /> @302found</a>
+        <a target="_blank" rel="noopener noreferrer" href="https://youtube.com/@lifeasadev"><YouTube /> @life as dev</a
 </section>
 
 <style>
@@ -116,7 +130,34 @@ import Chevron from "/public/chevron.svg";
         line-height: 1.6;
     }
 
-    .i-love p {
-        padding-left: 3.4rem;
+    .i-love p, .on-the-web p {
+        padding-left: 2.4rem;
+    }
+
+    .on-the-web p  {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .on-the-web a {
+        border-radius: 7px;
+        width: fit-content;
+        padding: 0.4rem 1.5rem;
+        margin: 0.3rem 0;
+        color: #81E6D9;
+        list-style: none;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+    }
+
+    .on-the-web a:hover {
+        background-color: rgba(129, 230, 217, 0.3);
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .on-the-web a svg {
+        fill: #81E6D9;
     }
 </style>
