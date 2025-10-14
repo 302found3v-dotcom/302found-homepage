@@ -43,7 +43,6 @@ import YouTube from "../components/YouTube.astro";
 <section class="on-the-web">
     <h2 class="sub-head">On the web</h2>
     <p>
-        <span>You can find me on</span>
         <a class="on-the-web-button" target="_blank" rel="noopener noreferrer" href="https://github.com/302foundevx"><GitHub /> @302foundevx</a>
         <a class="on-the-web-button" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/302foundev/"><LinkedIn /> @302foundev</a>
         <a class="on-the-web-button" target="_blank" rel="noopener noreferrer" href="https://x.com/302foundev"><X /> @302foundev</a>
@@ -75,7 +74,7 @@ import YouTube from "../components/YouTube.astro";
     }
 
     .link-to {
-        color: #ff63c3;
+        color: var(--link-to-text);
         text-decoration: none;
     }
 
@@ -139,18 +138,12 @@ import YouTube from "../components/YouTube.astro";
         flex-direction: column;
     }
 
-    .on-the-web span {
-        margin-bottom: 1.2rem;
-        text-indent: 0;
-        font-weight: 300;
-    }
-
     .on-the-web-button {
         border-radius: 7px;
         width: fit-content;
         padding: 0.4rem 1.2rem;
         margin: 0.2rem 0;
-        color: #81E6D9;
+        color: var(--on-the-web-text-color);;
         list-style: none;
         text-decoration: none;
         display: inline-flex;
@@ -164,6 +157,6 @@ import YouTube from "../components/YouTube.astro";
     }
 
     .on-the-web-button svg {
-        fill: #81E6D9;
+        fill: var(--on-the-web-text-color);
     }
 </style>

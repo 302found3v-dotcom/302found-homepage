@@ -1,11 +1,47 @@
 /* global styles */
 
-html {
+:root {
+  --bg-color: #f0e6db;
+  --text-color: #202023;
+  --header-bg-color: #f6f0e8;
+  --hero-bg-color: #f6f0e8;
+  --on-the-web-text-color: #2C7A7B;
+  --link-to-text: #3d7aed;
+  --header-svg-fill: #202023;
+  --theme-toggle-bg: #E2E8F0;
+  --theme-toggle-color: #1A202C;
   font-family: 'Onest Variable', sans-serif;
-  box-sizing: border-box;
-  color: #fff;
-  background-color: #202023;
   text-wrap: balance;
+  color-scheme: light dark;
+}
+
+html.dark {
+  --bg-color: #202023;
+  --text-color: #f6f0e8;
+  --header-bg-color: rgb(32, 32, 35);
+  --hero-bg-color: rgba(49, 49, 52, 1);
+  --on-the-web-text-color: #81E6D9;
+  --link-to-text: #ff63c3;
+  --header-svg-fill: #f6f0e8;
+  --theme-toggle-bg: rgba(18, 25, 40, 1);
+  --theme-toggle-color: #F7FAFC;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+body {
+  background-color: inherit;
+  color: inherit;
 }
 
 .container {
