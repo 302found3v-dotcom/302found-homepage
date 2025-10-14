@@ -18,6 +18,7 @@
   --theme-toggle-color: #1A202C;
   --portfolio-button: #319795;
   --portfolio-button-color: #fff;
+  --otw-button-hover: rgb(208, 246, 255);
   font-family: 'Onest Variable', sans-serif;
   text-wrap: balance;
   color-scheme: light dark;
@@ -35,6 +36,7 @@ html.dark {
   --theme-toggle-color: #F7FAFC;
   --portfolio-button: #81e6d9;
   --portfolio-button-color: #202023;
+  --otw-button-hover: rgba(129, 230, 217, 0.2);
 }
 
 html {
