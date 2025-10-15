@@ -1,27 +1,29 @@
 ---
-import Patita from '/public/patita.svg'
-import GitHub from '/public/github.svg'
-import ThemeToggle from '../components/ThemeToggle.astro'
+import Patita from '/public/patita.svg';
+import GitHub from '/public/github.svg';
+import { Toggle } from 'astro-theme-toggle';
 ---
 
 <header>
     <nav>
-        <a class="marker" href="/" aria-label="Home">
-            <Patita class="icon" />
-            <span>Juan Alberto</span>
-        </a>
+        <div>
+            <a class="marker" href="/" aria-label="Home">
+                <Patita class="icon" />
+                <span>Juan Alberto</span>
+            </a>
 
-        <div class="links">
-            <ul class="list">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Work</a></li>
-                <li><a href="/wallpapers">Wallpapers</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="https://github.com/302foundevx/302found-homepage" rel="noopener noreferer" target="_blank"><span class="source"><GitHub />Source</span></a></li>
-            </ul>
+            <div class="links">
+                <ul class="list">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Work</a></li>
+                    <li><a href="/wallpapers">Wallpapers</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="https://github.com/302foundevx/302found-homepage" rel="noopener noreferer" target="_blank"><span class="source"><GitHub />Source</span></a></li>
+                </ul>
+            </div>
+
+            <Toggle style="width: 25px; height: 25px;" />
         </div>
-
-        <ThemeToggle />
 
     </nav>
 </header>
@@ -35,12 +37,21 @@ import ThemeToggle from '../components/ThemeToggle.astro'
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 0.5rem clamp(1rem, 5vw, 16.5rem);
+        padding: 0.5rem;
         font-size: 1.05rem;
         margin: 0 auto;
         background-color: var(--header-bg-color);
         backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
         z-index: 1;
+    }
+
+    nav > div {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        max-width: 768px;
+        margin: auto;
     }
 
     .theme {

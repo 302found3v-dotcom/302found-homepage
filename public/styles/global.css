@@ -10,7 +10,7 @@
   --bg-color: #f0e6db;
   --text-color: #202023;
   --header-bg-color: #f6f0e8;
-  --hero-bg-color: #f6f0e8;
+  --header-bg-color: rgba(255, 255, 255, 0.7);
   --on-the-web-text-color: #2C7A7B;
   --link-to-text: #3d7aed;
   --header-svg-fill: #202023;
@@ -21,13 +21,13 @@
   --otw-button-hover: rgb(208, 246, 255);
   font-family: 'Onest Variable', sans-serif;
   text-wrap: balance;
-  color-scheme: light dark;
+  color-scheme: light dark system;
 }
 
 html.dark {
   --bg-color: #202023;
   --text-color: #f6f0e8;
-  --header-bg-color: rgb(32, 32, 35);
+  --header-bg-color: rgba(32, 32, 35, 0.5);
   --hero-bg-color: rgba(49, 49, 52, 1);
   --on-the-web-text-color: #81E6D9;
   --link-to-text: #ff63c3;
