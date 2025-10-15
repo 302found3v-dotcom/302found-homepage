@@ -14,10 +14,10 @@ import { Toggle } from 'astro-theme-toggle';
 
             <div class="links">
                 <ul class="list">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Work</a></li>
-                    <li><a href="/wallpapers">Wallpapers</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="/work">Work</a></li>
+                    <li><a href="/posts">Posts</a></li>
+                    <li><a href="https://store.craftz.dog" target="_blank" rel="noopener noreferer">Wallpapers</a></li>
+                    <li><a href="mailto:jarscode.dev@outlook.com">Contact</a></li>
                     <li><a href="https://github.com/302foundevx/302found-homepage" rel="noopener noreferer" target="_blank"><span class="source"><GitHub />Source</span></a></li>
                 </ul>
             </div>
@@ -34,9 +34,6 @@ import { Toggle } from 'astro-theme-toggle';
         left: 0;
         right: 0;
         top: 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
         padding: 0.5rem;
         font-size: 1.05rem;
         margin: 0 auto;
@@ -49,8 +46,9 @@ import { Toggle } from 'astro-theme-toggle';
     nav > div {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         gap: 1.5rem;
-        max-width: 768px;
+        width: 768px;
         margin: auto;
     }
 

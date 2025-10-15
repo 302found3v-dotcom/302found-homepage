@@ -1,0 +1,25 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../sections/Header.astro";
+
+
+export async function getStaticPaths() {
+  return [
+    {
+      params: { id: "work" },
+      props: { title: "My personal work" }
+      },
+
+      {
+        params: { id: "posts" },
+        props: { title: "My recent posts" }
+      }
+  ]
+}
+
+const { title } = Astro.props;
+---
+
+<Layout title={title}>
+  <title>{title}</title>
+</Layout>
