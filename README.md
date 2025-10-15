@@ -1,3 +1,3 @@
 # 302Found Homepage
 
-<img width="2688" height="2545" alt="image" src="https://github.com/user-attachments/assets/332b00bb-2500-411e-b4c0-80b6ffd7a1a2" />
+<img width="1231" height="1288" alt="image" src="https://github.com/user-attachments/assets/40c2f418-8888-4af3-813a-25c12782de96" />
