@@ -39,7 +39,7 @@ const socials = [
       <p>Digital Craftsman ( Artist / Developer / C-Creator )</p>
     </div>
 
-    <img src="/profile.webp" loading="lazy" alt="Juan Alberto Picture" />
+    <img src="/profile.webp" loading="eager" alt="Juan Alberto's profile picture" />
   </div>
 
   <div class="location">
@@ -120,6 +120,7 @@ const socials = [
     display: flex;
     align-items: center;
     gap: 1rem;
+    flex-wrap: wrap;
   }
 
   .socials svg {
@@ -160,5 +161,19 @@ const socials = [
     transform: translateY(-2px);
     transition: all .2s ease-in-out;
     border-color: var(--twitter-link-color);
+  }
+
+  @media (max-width: 768px) {
+    .craft {
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    
+    .craft h1 {
+      font-size: 1.8rem;
+      text-align: center;
+    }
   }
 </style>

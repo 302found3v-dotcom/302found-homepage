@@ -37,31 +37,36 @@ const navLinks =[
 
 <header>
     <nav>
-        <div>
-            <a class="marker" href="/" aria-label="Home">
-                <Patita class="icon" />
-                <span>Juan Alberto</span>
-            </a>
+        <a class="marker" href="/" aria-label="Home">
+            <Patita class="icon" />
+            <span>Juan Alberto</span>
+        </a>
 
-            <div class="links">
-                <ul class="list">
-                    {navLinks.map((link) => (
-                        <li id={link.id}><a rel={link.rel} target={link.target} class="nav-link" href={link.href}>{
-                            link.icon && <GitHub />}
-                            {link.name}
-                        </a></li>
-                    ))}
-                </ul>
-            </div>
-
-            <Toggle style="width: 25px; height: 25px;" />
+        <div class="links">
+            <ul class="list">
+                {navLinks.map((link) => (
+                    <li id={link.id}>
+                        <a 
+                            rel={link.rel} 
+                            target={link.target} 
+                            class="nav-link" 
+                            href={link.href}
+                            aria-current={link.href === Astro.url.pathname ? 'page' : undefined}
+                            >
+                                {link.icon && <GitHub />}
+                                {link.name}
+                            </a>
+                    </li>
+                ))}
+            </ul>
         </div>
 
+        <Toggle style="width: 25px; height: 25px;" />
     </nav>
 </header>
 
 <style>
-    nav {
+    header {
         position: fixed;
         left: 0;
         right: 0;
@@ -75,27 +80,13 @@ const navLinks =[
         z-index: 1;
     }
 
-    nav > div {
+    nav {
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 1.5rem;
-        width: 768px;
+        width: min(768px, 100% - 2rem);
         margin: auto;
-    }
-
-    .theme {
-        display: flex;
-        align-items: center;
-    }
-
-    .theme button {
-        display: flex;
-        border: none;
-        border-radius: .375rem;
-        cursor: pointer;
-        color: #202023;
-        background-color: rgb(251, 212, 141);
     }
 
     .marker {
@@ -106,10 +97,6 @@ const navLinks =[
         align-items: center;
         font-weight: bold;
         gap: .2rem;
-    }
-
-    .links {
-      padding-right: 50px;
     }
 
     .list {
@@ -151,51 +138,6 @@ const navLinks =[
         height: 1rem;
         width: 1rem;
         fill: var(--header-svg-fill);
-    }
-
-    .theme-icon {
-        position: absolute;
-        height: 1.3rem;
-        width: 1.3rem;
-        opacity: 0;
-        transform: scale(0.5) rotate(-90deg);
-        transition: all 0.4s ease;
-        pointer-events: none;
-    }
-
-    .theme-icon.active {
-        opacity: 1;
-        transform: scale(1) rotate(0deg);
-        pointer-events: auto;
-    }
-
-    .theme button {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 2.2rem;
-        height: 2.2rem;
-        border: none;
-        border-radius: .375rem;
-        background-color: #805AD5;
-        color: #fff;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-
-    .theme button:hover {
-        background-color: #6B46C1;
-    }
-
-    html.dark .theme button {
-        background-color: rgb(251, 212, 141);
-        color: #202023;
-        transition: background-color 0.3s;
-    }
-
-    html.dark .theme button:hover {
-        background-color: rgb(255, 205, 69);
     }
 
     .nav-link.active {

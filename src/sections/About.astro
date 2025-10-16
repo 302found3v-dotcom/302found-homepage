@@ -1,0 +1,280 @@
+---
+import GitHub from "../components/icons/GitHub.astro";
+import LinkedIn from "../components/icons/LinkedIn.astro";
+import X from "../components/icons/X.astro";
+import YouTube from "../components/icons/YouTube.astro";
+import ChevronRight from "../components/icons/ChevronRight.astro";
+
+const socialLinks = [
+  { 
+    icon: GitHub, 
+    handle: "@302foundevx", 
+    href: "https://github.com/302foundevx",
+    label: "GitHub profile"
+  },
+  { 
+    icon: LinkedIn, 
+    handle: "@302foundev", 
+    href: "https://www.linkedin.com/in/302foundev/",
+    label: "LinkedIn profile"
+  },
+  { 
+    icon: X, 
+    handle: "@302foundev", 
+    href: "https://x.com/302foundev",
+    label: "X (Twitter) profile"
+  },
+  { 
+    icon: YouTube, 
+    handle: "@life as dev", 
+    href: "https://youtube.com/@lifeasadev",
+    label: "YouTube channel"
+  }
+];
+
+const bioItems = [
+  {
+    year: "2001",
+    text: "Born in Barahona, Dominican Republic."
+  },
+  {
+    year: "2023",
+    html: 'Earned the <a target="_blank" rel="noopener noreferrer" class="link-to" href="https://verified.elearnsecurity.com/certificates/6b4943a0-26a2-4ce7-8063-aff8e6bda825">eJPT (eLearnSecurity Junior Penetration Tester)</a>.'
+  },
+  {
+    year: "2025",
+    html: 'Currently studying at <a target="_blank" rel="noopener noreferrer" class="link-to" href="https://www.42madrid.com/">42 Madrid</a>, a cutting-edge programming school with a peer-to-peer, project-based learning model — no teachers, no classes, just real-world coding challenges. Promoted by <a target="_blank" rel="noopener noreferrer" class="link-to" href="https://www.fundaciontelefonica.com/">Fundación Telefónica España</a> and focuses on autonomy, collaboration, and problem-solving.'
+  }
+];
+---
+
+<article class="about-section">
+
+  <section class="work-section">
+    <h2 class="section-heading">Work</h2>
+    <p class="work-description">
+      I'm a Madrid-based application developer with a focus on building meaningful, user-centered digital experiences.
+      My approach blends strong technical execution with thoughtful design, taking ideas from concept to fully deployed products.
+      I'm currently advancing my skills at <a target="_blank" rel="noopener noreferrer" class="link-to" href="https://www.42madrid.com/">42 Madrid</a>, a rigorous, <i>peer-to-peer</i> programming school that emphasizes real-world problem solving.
+      I also share my learning journey and project insights on my YouTube channel,
+      "<a class="link-to" href="https://youtube.com/@lifeasadev">Life as Dev</a>".
+    </p>
+    <a class="portfolio-btn" href="/work">
+      <span>My portfolio</span>
+      <ChevronRight />
+    </a>
+  </section>
+
+  <section class="bio-section">
+    <h2 class="section-heading">Bio</h2>
+    <div class="timeline">
+      {bioItems.map((item) => (
+        <div class="timeline-item">
+          <span class="year">{item.year}</span>
+          <p set:html={item.html || item.text} />
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="interests-section">
+    <h2 class="section-heading">I ♥</h2>
+    <p>Art, music, and photography. Traveling, coffee, and nature. Technology, startups, open source, and continuous learning.</p>
+  </section>
+
+  <section class="social-section">
+    <h2 class="section-heading">On the web</h2>
+    <ul class="social-list">
+      {socialLinks.map((social) => (
+        <li>
+          <a 
+            class="social-link" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            href={social.href}
+            aria-label={social.label}
+          >
+            <social.icon />
+            <span>{social.handle}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+</article>
+
+<style>
+  .about-section {
+    max-width: 100%;
+  }
+
+  .about-section > section {
+    margin-bottom: 2.5rem;
+  }
+
+  .section-heading {
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-color: #525252;
+    text-decoration-thickness: 4px;
+    line-height: 1.33;
+  }
+
+  p {
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .link-to {
+    color: var(--link-to-text);
+    text-decoration: none;
+    transition: text-decoration 0.15s ease;
+  }
+
+  .link-to:hover {
+    text-decoration: underline;
+  }
+
+  .work-description {
+    text-indent: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+  }
+
+  .portfolio-btn {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 0.5rem;
+    background-color: var(--portfolio-button);
+    color: var(--portfolio-button-color);
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .portfolio-btn:hover {
+    background-color: #4fd1c5;
+    transform: translateY(-1px);
+  }
+
+  .portfolio-btn:hover :global(svg) {
+    transform: translateX(3px);
+  }
+
+  .portfolio-btn :global(svg) {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.2s ease;
+  }
+
+  /* Bio Section - Timeline */
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 3.4em 1fr;
+    gap: 0.6rem;
+    align-items: start;
+  }
+
+  .year {
+    font-weight: 600;
+    padding-top: 0.1rem;
+  }
+
+  .timeline-item p {
+    margin: 0;
+  }
+
+  .interests-section p {
+    padding-left: 1.2rem;
+  }
+
+  .social-list {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.5rem 1.2rem;
+    border-radius: 7px;
+    color: var(--on-the-web-text-color);
+    text-decoration: none;
+    width: fit-content;
+    transition: background-color 0.2s ease;
+  }
+
+  .social-link:hover {
+    background-color: var(--otw-button-hover);
+  }
+
+  .social-link :global(svg) {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+  }
+
+  @media (max-width: 768px) {
+    .about-section > section {
+      margin-bottom: 2rem;
+    }
+
+    .section-heading {
+      font-size: 1.1rem;
+    }
+
+    .work-description {
+      text-indent: 0;
+      padding: 0 0.5rem;
+    }
+
+    .timeline-item {
+      grid-template-columns: 2.5em 1fr;
+      gap: 0.5rem;
+    }
+
+    .interests-section p,
+    .social-list {
+      padding-left: 0.5rem;
+    }
+
+    .portfolio-btn {
+      width: fit-content;
+      margin: 0 auto;
+      justify-content: center;
+    }
+
+    .social-link {
+      padding: 0.5rem 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .timeline-item {
+      grid-template-columns: 1fr;
+      gap: 0.2rem;
+    }
+
+    .year {
+      padding-top: 0;
+    }
+  }
+</style>
