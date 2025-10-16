@@ -1,5 +1,29 @@
 ---
+import Email from "../components/icons/Email.astro";
+import Location from "../components/icons/Location.astro";
+import LinkedIn from "../components/icons/LinkedIn.astro";
+import Twitter from "../components/icons/X.astro";
 
+const socials = [
+  {
+    name: "Email",
+    icon: Email,
+    href: "mailto:jarscode.dev@outlook.com",
+    className: "email"
+  },
+  {
+    name: "LinkedIn",
+    icon: LinkedIn,
+    href: "https://linkedin.com/in/302foundev",
+    className: "linkedin"
+  },
+  {
+    name: "Twitter",
+    icon: Twitter,
+    href: "https://twitter.com/302foundev",
+    className: "twitter"
+  }
+]
 ---
 
 
@@ -16,6 +40,22 @@
     </div>
 
     <img src="/public/profile.webp" alt="Juan Alberto Picture" />
+  </div>
+
+  <div class="location">
+    <Location />
+    <span>Matrix, The real world</span>
+  </div>
+
+    <div class="socials">
+      {socials.map((social) => {
+        return (
+          <a href={social.href} target="_blank" rel="noopener noreferrer" class={social.className}>
+            <social.icon />
+            <span>{social.name}</span>
+          </a>
+        )
+      })}
   </div>
 
 </section>
@@ -49,6 +89,7 @@
     margin-top: 1.2rem;
     justify-content: space-between;
     display: flex;
+    margin-bottom: 1rem;
   }
 
   .craft h1 {
@@ -66,5 +107,41 @@
     border: 1px solid #fff;
     object-fit: cover;
     background-color: #fff;
+  }
+
+  .location {
+    display: flex;
+    align-items: center;
+    gap: .1rem;
+    margin-bottom: 10px;
+  }
+
+  .socials {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .socials svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .email, .linkedin, .twitter {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    border: 2px solid var(--hero-bg-color);
+    padding: .25rem;
+    border-radius: .5rem;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .email:hover, .linkedin:hover, .twitter:hover {
+    background-color: var(--hero-bg-color);
+    color: #fff;
+    transform: translateY(-2px);
+    transition: all .2s ease-in-out;
   }
 </style>

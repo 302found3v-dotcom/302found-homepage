@@ -2,12 +2,62 @@
 
 ---
 
-<div>
+<div class="prefooter-container">
     <div class="prefooter">
-
+        <a href="https://hootree.vercel.app" target="_blank" rel="noopener noreferrer">
+            <img src="/public/project1.webp" alt="Project 1">
+            <div class="prefooter-text">
+                <h3>hootree</h3>
+                <span>Access all your personal links in one place.</span>
+            </div>
+        </a>
     </div>
 </div>
 
 <style>
-    
+    .prefooter-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 25px;
+        margin-bottom: 50px;
+    }
+
+    .prefooter {
+        gap: 10px;
+        padding: 10px;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .prefooter a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .prefooter img {
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
+    }
+
+    .prefooter-text {
+        display: flex;
+        flex-direction: column;
+        text-align: center;   
+    }
+
+    .prefooter h3 {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+
+    .prefooter span {
+        font-size: 15px;
+        font-weight: 400;
+    }
 </style>
