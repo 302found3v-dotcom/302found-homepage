@@ -25,6 +25,7 @@
   --linkedin-link-color: #3d7aed;
   --twitter-link-color: #1DA1F2;
   --email-link-color: #ff6363;
+  --header-active-color: #3d7aed;
   font-family: 'Onest Variable', sans-serif;
   text-wrap: balance;
   color-scheme: light dark system;
@@ -48,6 +49,7 @@ html.dark {
   --linkedin-link-color: #3d7aed;
   --twitter-link-color: #1DA1F2;
   --email-link-color: #ff6363;
+  --header-active-color: #3d7aed;
 }
 
 html {
