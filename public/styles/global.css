@@ -22,6 +22,9 @@
   --otw-button-hover: rgb(208, 246, 255);
   --color-gray-200: #787878;
   --location-color: #000;
+  --linkedin-link-color: #3d7aed;
+  --twitter-link-color: #1DA1F2;
+  --email-link-color: #ff6363;
   font-family: 'Onest Variable', sans-serif;
   text-wrap: balance;
   color-scheme: light dark system;
@@ -42,6 +45,9 @@ html.dark {
   --otw-button-hover: rgba(129, 230, 217, 0.2);
   --color-gray-200: #6e6e6e;
   --location-color: #81E6D9;
+  --linkedin-link-color: #3d7aed;
+  --twitter-link-color: #1DA1F2;
+  --email-link-color: #ff6363;
 }
 
 html {
