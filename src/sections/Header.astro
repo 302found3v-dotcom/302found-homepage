@@ -1,6 +1,6 @@
 ---
 import Patita from '/public/patita.svg';
-import GitHub from '/public/github.svg';
+import GitHub from '../components/icons/GitHub.astro';
 import { Toggle } from 'astro-theme-toggle';
 
 const navLinks =[
@@ -17,7 +17,9 @@ const navLinks =[
     {
         id: "wallpapers",
         href: "https://store.craftz.dog",
-        name: "Wallpapers"
+        name: "Wallpapers",
+        rel: "noopener noreferrer",
+        target: "_blank"
     },
     {
         id: "uses",
@@ -27,7 +29,8 @@ const navLinks =[
     {
         id: "source",
         href: "https://github.com/302foundevx/302found-homepage",
-        name: "Source"
+        name: "Source",
+        icon: true
     }
 ]
 ---
@@ -43,7 +46,10 @@ const navLinks =[
             <div class="links">
                 <ul class="list">
                     {navLinks.map((link) => (
-                        <li id={link.id}><a class="nav-link" href={link.href}>{link.name}</a></li>
+                        <li id={link.id}><a rel={link.rel} target={link.target} class="nav-link" href={link.href}>{
+                            link.icon && <GitHub />}
+                            {link.name}
+                        </a></li>
                     ))}
                 </ul>
             </div>
@@ -108,10 +114,13 @@ const navLinks =[
 
     .list {
         display: flex;
-        margin: 10px 0;
-        padding: 0;
         gap: 1.2rem;
-        list-style: none;
+    }
+
+    .list li {
+        display: flex;
+        align-items: center;
+        gap: .2rem;
     }
 
     .list li a {
@@ -191,7 +200,6 @@ const navLinks =[
 
     .nav-link.active {
         background-color: var(--header-active-color);
-        color: var(--header-active-color);
     }
 </style>
 
