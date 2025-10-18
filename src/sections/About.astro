@@ -9,7 +9,7 @@ const socialLinks = [
   { 
     icon: GitHub, 
     handle: "@302foundevx", 
-    href: "https://github.com/302foundevx",
+    href: "https://github.com/302found3v-dotcom",
     label: "GitHub profile"
   },
   { 
@@ -35,15 +35,15 @@ const socialLinks = [
 const bioItems = [
   {
     year: "2001",
-    text: "Born in Barahona, Dominican Republic."
+    html: "Born in Barahona, Dominican Republic."
   },
   {
     year: "2023",
-    html: 'Earned the <a target="_blank" rel="noopener noreferrer" class="link-to" href="https://verified.elearnsecurity.com/certificates/6b4943a0-26a2-4ce7-8063-aff8e6bda825">eJPT (eLearnSecurity Junior Penetration Tester)</a>.'
+    html: 'Earned the <a target="_blank" rel="noopener noreferrer" href="https://verified.elearnsecurity.com/certificates/6b4943a0-26a2-4ce7-8063-aff8e6bda825">eJPT (eLearnSecurity Junior Penetration Tester)</a>.'
   },
   {
     year: "2025",
-    html: 'Currently studying at <a target="_blank" rel="noopener noreferrer" class="link-to" href="https://www.42madrid.com/">42 Madrid</a>, a cutting-edge programming school with a peer-to-peer, project-based learning model — no teachers, no classes, just real-world coding challenges. Promoted by <a target="_blank" rel="noopener noreferrer" class="link-to" href="https://www.fundaciontelefonica.com/">Fundación Telefónica España</a> and focuses on autonomy, collaboration, and problem-solving.'
+    html: 'Currently studying at <a target="_blank" rel="noopener noreferrer" href="https://www.42madrid.com/">42 Madrid</a>, a cutting-edge programming school with a peer-to-peer, project-based learning model — no teachers, no classes, just real-world coding challenges. Promoted by <a target="_blank" rel="noopener noreferrer" href="https://www.fundaciontelefonica.com/">Fundación Telefónica España</a> and focuses on autonomy, collaboration, and problem-solving.'
   }
 ];
 ---
@@ -68,14 +68,53 @@ const bioItems = [
   <section class="bio-section">
     <h2 class="section-heading">Bio</h2>
     <div class="timeline">
-      {bioItems.map((item) => (
-        <div class="timeline-item">
-          <span class="year">{item.year}</span>
-          <p set:html={item.html || item.text} />
-        </div>
-      ))}
+
+      <div class="timeline-item">
+        <span class="year">2001</span>
+        <p>Born in Barahona, Dominican Republic.</p>
+      </div>
+
+      <div class="timeline-item">
+        <span class="year">2023</span>
+        <p>
+          Earned the 
+          <a 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="link-to" 
+            href="https://verified.elearnsecurity.com/certificates/6b4943a0-26a2-4ce7-8063-aff8e6bda825"
+          >
+            eJPT (eLearnSecurity Junior Penetration Tester)
+          </a>.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <span class="year">2025</span>
+        <p>
+          Currently studying at 
+          <a 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="link-to" 
+            href="https://www.42madrid.com/"
+          >
+            42 Madrid
+          </a>, a cutting-edge programming school with a peer-to-peer, project-based learning model — no teachers, no classes, just real-world coding challenges. Promoted by 
+          <a 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="link-to" 
+            href="https://www.fundaciontelefonica.com/"
+          >
+            Fundación Telefónica España
+          </a> and focuses on autonomy, collaboration, and problem-solving.
+        </p>
+      </div>
+
     </div>
   </section>
+
 
   <section class="interests-section">
     <h2 class="section-heading">I ♥</h2>
