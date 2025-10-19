@@ -37,7 +37,6 @@ const navLinks =[
     }
 ]
 ---
-
 <header>
     <nav>
         <a class="marker" href="/" aria-label="Home">
@@ -70,6 +69,7 @@ const navLinks =[
         </div>
     </nav>
 </header>
+<div class="page-bg"></div>
 
 <style>
     header {
@@ -145,20 +145,20 @@ const navLinks =[
         justify-content: center;
     }
 
-    /* === responsive desgin */
+
 
     .menu-toggle {
         display: none;
         cursor: pointer;
         color: inherit;
         background-color: transparent;
-        border: 1px solid gray;
+        border: 1px solid rgb(96, 96, 96);
         border-radius: 5px;
         padding: 2px 8px;
     }
 
     .menu-toggle:hover {
-        background-color: red;
+        background-color: rgb(96, 96, 96);
     }
 
     @media (max-width: 768px) {
@@ -172,19 +172,44 @@ const navLinks =[
         }
 
         .links {
-            display: none;
             position: absolute;
             top: 100%;
-            right: 25px;
+            right: 15px;
             background-color: rgb(45, 55, 72);
-            padding: 1rem 0;
-            text-align: center;
             width: 250px;
             border-radius: 10px;
+            overflow: hidden;
+            z-index: 1;
+            opacity: 0;
+            transform: scale(0.95);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            pointer-events: none;
         }
 
         .links.active {
-            display: block;
+            opacity: 1;
+            transform: scale(1);
+            pointer-events: auto;
+        }
+
+        .page-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: transparent;
+            z-index: 1;
+            opacity: 0;
+            transform: scale(0.95);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            pointer-events: none;
+        }
+        
+        .page-bg.active {
+            opacity: 1;
+            transform: scale(1);
+            pointer-events: auto;
         }
 
         .list {
@@ -209,10 +234,19 @@ const navLinks =[
 
     const menuToggle = document.querySelector(".menu-toggle");
     const links = document.querySelector(".links");
+    const pageBg = document.querySelector(".page-bg");
+
+    function closeMenu() {
+        links?.classList.remove("active");
+        pageBg?.classList.remove("active");
+    }
 
     menuToggle?.addEventListener("click", () => {
         links?.classList.toggle("active");
+        pageBg?.classList.toggle("active");
     });
+
+    pageBg?.addEventListener("click", closeMenu);
 
     const navLinks = document.querySelectorAll(".nav-link");
     const currentPath = window.location.pathname;
