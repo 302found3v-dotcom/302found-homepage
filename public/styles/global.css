@@ -26,7 +26,7 @@
   --twitter-link-color: #1DA1F2;
   --email-link-color: #ff6363;
   --header-active-color: #3d7aed;
-  font-family: 'Onest Variable', sans-serif;
+  font-family: 'Onest Variable', 'Verdana', 'Geneva', 'Tahoma', 'sans-serif';
   text-wrap: balance;
   color-scheme: light dark system;
 }
