@@ -53,7 +53,7 @@ const bioItems = [
   <section class="work-section">
     <h2 class="section-heading">Work</h2>
     <p class="work-description">
-      I'm a Madrid-based application developer with a focus on building meaningful, user-centered digital experiences.
+      A Madrid-based application developer with a focus on building meaningful, user-centered digital experiences.
       My approach blends strong technical execution with thoughtful design, taking ideas from concept to fully deployed products.
       I'm currently advancing my skills at <a target="_blank" rel="noopener noreferrer" class="link-to" href="https://www.42madrid.com/">42 Madrid</a>, a rigorous, <i>peer-to-peer</i> programming school that emphasizes real-world problem solving.
       I also share my learning journey and project insights on my YouTube channel,
@@ -147,8 +147,8 @@ const bioItems = [
     max-width: 100%;
   }
 
-  .about-section > section {
-    margin-bottom: 2.5rem;
+  .interests-section {
+    margin-bottom: 20px;
   }
 
   .section-heading {
@@ -163,6 +163,7 @@ const bioItems = [
 
   p {
     margin: 0;
+    padding: 0;
     line-height: 1.6;
   }
 
@@ -180,6 +181,7 @@ const bioItems = [
     text-indent: 1.5rem;
     font-weight: 300;
     margin-bottom: 1rem;
+    width: 100%;
   }
 
   .portfolio-btn {
@@ -213,7 +215,6 @@ const bioItems = [
     transition: transform 0.2s ease;
   }
 
-  /* Bio Section - Timeline */
   .timeline {
     display: flex;
     flex-direction: column;
@@ -289,11 +290,12 @@ const bioItems = [
 
     .work-description {
       text-indent: 0;
-      padding: 0 0.5rem;
+      padding-left: .5rem;
+      text-wrap: balance;
     }
 
     .timeline-item {
-      grid-template-columns: 2.5em 1fr;
+      display: flex;
       gap: 0.5rem;
     }
 
