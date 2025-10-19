@@ -52,7 +52,6 @@ const socials = [
   <div class="socials">
     {socials.map((social) => (
       <a
-        key={social.name}
         href={social.href}
         target="_blank"
         rel="noopener noreferrer"
@@ -120,14 +119,14 @@ const socials = [
   .location {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.3rem;
     margin-bottom: 10px;
   }
 
   .socials {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: .5rem;
     flex-wrap: wrap;
   }
 
