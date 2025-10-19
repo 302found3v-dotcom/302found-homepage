@@ -23,14 +23,13 @@ const socials = [
     href: "https://twitter.com/302foundev",
     className: "twitter"
   }
-]
+];
 ---
 
-
-<section class="section">
+<header class="section">
 
   <div class="hero">
-    <span>Hello, I'm an web app developer based in Madrid!</span>
+    <span>Hello, I'm a web app developer based in Madrid!</span>
   </div>
 
   <div class="craft">
@@ -39,57 +38,63 @@ const socials = [
       <p>Digital Craftsman ( Artist / Developer / C-Creator )</p>
     </div>
 
-    <img src="/profile.webp" loading="eager" alt="Juan Alberto's profile picture" />
+    <picture>
+      <source srcset="/profile.webp" type="image/webp" />
+      <img src="/profile.jpg" loading="eager" alt="Juan Alberto's profile picture" />
+    </picture>
   </div>
 
   <div class="location">
     <Location />
-    <span>Matrix, The real world</span>
+    <span>Madrid, Spain</span>
   </div>
 
-    <div class="socials">
-      {socials.map((social) => {
-        return (
-          <a href={social.href} target="_blank" rel="noopener noreferrer" class={social.className}>
-            <social.icon />
-            <span>{social.name}</span>
-          </a>
-        )
-      })}
+  <div class="socials">
+    {socials.map((social) => (
+      <a
+        key={social.name}
+        href={social.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        class={social.className}
+        aria-label={`Visit my ${social.name}`}
+      >
+        <social.icon />
+        <span>{social.name}</span>
+      </a>
+    ))}
   </div>
 
-</section>
+</header>
 
 <style>
   .section {
     flex-direction: column;
-    margin: 10rem auto 3rem auto;
-  }
-
-  .section, .hero {
-    width: 100%;
+    margin: 10rem 0 3rem 0;
     display: flex;
+    width: 100%;
   }
 
   .hero {
+    width: 100%;
+    display: flex;
     justify-content: center;
     align-items: center;
   }
 
   .hero span {
-    width: 100%;
     text-align: center;
     border-radius: .5rem;
     background-color: var(--hero-bg-color);
     font-size: 15px;
-    padding: 0.7rem;
+    padding: 0.7rem 4rem;
   }
 
   .craft {
     margin-top: 1.2rem;
-    justify-content: space-between;
-    display: flex;
     margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
   }
 
   .craft h1 {
@@ -100,6 +105,7 @@ const socials = [
     margin: 0;
   }
 
+  .craft picture,
   .craft img {
     width: 100px;
     height: 100px;
@@ -107,12 +113,13 @@ const socials = [
     border: 1px solid #fff;
     object-fit: cover;
     background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
   .location {
     display: flex;
     align-items: center;
-    gap: .1rem;
+    gap: 0.5rem;
     margin-bottom: 10px;
   }
 
@@ -133,17 +140,17 @@ const socials = [
     align-items: center;
     gap: .5rem;
     border: 2px solid var(--hero-bg-color);
-    padding: .25rem;
+    padding: .3rem .4rem;
     border-radius: .5rem;
     text-decoration: none;
     color: inherit;
+    transition: all .2s ease-in-out;
   }
 
   .email:hover {
     background-color: var(--email-link-color);
     color: #fff;
     transform: translateY(-2px);
-    transition: all .2s ease-in-out;
     border-color: var(--email-link-color);
   }
 
@@ -151,7 +158,6 @@ const socials = [
     background-color: var(--linkedin-link-color);
     color: #fff;
     transform: translateY(-2px);
-    transition: all .2s ease-in-out;
     border-color: var(--linkedin-link-color);
   }
 
@@ -159,7 +165,6 @@ const socials = [
     background-color: var(--twitter-link-color);
     color: #fff;
     transform: translateY(-2px);
-    transition: all .2s ease-in-out;
     border-color: var(--twitter-link-color);
   }
 
@@ -170,10 +175,26 @@ const socials = [
       gap: 1rem;
       margin-bottom: 2rem;
     }
-    
+
     .craft h1 {
       font-size: 1.8rem;
       text-align: center;
+    }
+
+    .hero span {
+      padding: 0.7rem 2rem;
+    }
+
+    .socials, .location {
+      margin: auto;
+    }
+
+    .location {
+      margin-bottom: .5rem;
+    }
+
+    .email, .linkedin, .twitter {
+      padding: .5rem 1rem;
     }
   }
 </style>
