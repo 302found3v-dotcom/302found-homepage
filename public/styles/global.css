@@ -1,73 +1,80 @@
 /* global styles */
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 :root {
-  --bg-color: #f0e6db;
-  --text-color: #202023;
-  --header-bg-color: #f6f0e8;
-  --header-bg-color: rgba(255, 255, 255, 0.7);
-  --on-the-web-text-color: #2C7A7B;
-  --hero-bg-color: rgb(249, 247, 244);
-  --link-to-text: #3d7aed;
-  --header-svg-fill: #202023;
-  --theme-toggle-bg: #E2E8F0;
-  --theme-toggle-color: #1A202C;
-  --portfolio-button: #319795;
-  --portfolio-button-color: #fff;
-  --otw-button-hover: rgb(208, 246, 255);
-  --color-gray-200: #787878;
-  --location-color: #000;
-  --linkedin-link-color: #3d7aed;
-  --twitter-link-color: #1DA1F2;
-  --email-link-color: #ff6363;
-  --header-active-color: #3d7aed;
-  font-family: 'Onest Variable', 'Verdana', 'Geneva', 'Tahoma', 'sans-serif';
-  text-wrap: balance;
-  color-scheme: light dark system;
+    --bg-color: #f0e6db;
+    --text-color: #202023;
+    --header-bg-color: #f6f0e8;
+    --header-bg-color: rgba(255, 255, 255, 0.7);
+    --on-the-web-text-color: #2c7a7b;
+    --hero-bg-color: rgb(249, 247, 244);
+    --link-to-text: #3d7aed;
+    --header-svg-fill: #202023;
+    --theme-toggle-bg: #e2e8f0;
+    --theme-toggle-color: #1a202c;
+    --portfolio-button: #319795;
+    --portfolio-button-color: #fff;
+    --otw-button-hover: rgb(208, 246, 255);
+    --color-gray-200: #787878;
+    --location-color: #000;
+    --linkedin-link-color: #3d7aed;
+    --twitter-link-color: #1da1f2;
+    --email-link-color: #ff6363;
+    --header-active-color: #3d7aed;
+    font-family: "Onest Variable", "Verdana", "Geneva", "Tahoma", "sans-serif";
+    text-wrap: balance;
+    color-scheme: light dark system;
 }
 
 html.dark {
-  --bg-color: #202023;
-  --text-color: #f6f0e8;
-  --header-bg-color: rgba(32, 32, 35, 0.5);
-  --hero-bg-color: rgba(49, 49, 52, 1);
-  --on-the-web-text-color: #81E6D9;
-  --link-to-text: #ff63c3;
-  --header-svg-fill: #f6f0e8;
-  --theme-toggle-bg: rgba(18, 25, 40, 1);
-  --theme-toggle-color: #F7FAFC;
-  --portfolio-button: #81e6d9;
-  --portfolio-button-color: #202023;
-  --otw-button-hover: rgba(129, 230, 217, 0.2);
-  --color-gray-200: #6e6e6e;
-  --location-color: #81E6D9;
-  --linkedin-link-color: #3d7aed;
-  --twitter-link-color: #1DA1F2;
-  --email-link-color: #ff6363;
-  --header-active-color: #3d7aed;
+    --bg-color: #202023;
+    --text-color: #f6f0e8;
+    --header-bg-color: rgba(32, 32, 35, 0.5);
+    --hero-bg-color: rgba(49, 49, 52, 1);
+    --on-the-web-text-color: #81e6d9;
+    --link-to-text: #ff63c3;
+    --header-svg-fill: #f6f0e8;
+    --theme-toggle-bg: rgba(18, 25, 40, 1);
+    --theme-toggle-color: #f7fafc;
+    --portfolio-button: #81e6d9;
+    --portfolio-button-color: #202023;
+    --otw-button-hover: rgba(129, 230, 217, 0.2);
+    --color-gray-200: #6e6e6e;
+    --location-color: #81e6d9;
+    --linkedin-link-color: #3d7aed;
+    --twitter-link-color: #1da1f2;
+    --email-link-color: #ff6363;
+    --header-active-color: #3d7aed;
 }
 
 html {
-  transition: background-color 0.3s ease, color 0.3s ease;
-  background-color: var(--bg-color);
-  color: var(--text-color);
+    scrollbar-width: none; /* firefox */
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+html::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
 }
 
 body {
-  background-color: inherit;
-  color: inherit;
+    background-color: inherit;
+    color: inherit;
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 768px;
-  margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 768px;
+    margin: 0 auto;
 }

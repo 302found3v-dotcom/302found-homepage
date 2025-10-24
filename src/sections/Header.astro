@@ -1,31 +1,31 @@
 ---
-import Patita from '/public/patita.svg';
-import GitHub from '../components/icons/GitHub.astro';
-import { Toggle } from 'astro-theme-toggle';
-import Menu2 from '../components/icons/Menu-2.astro';
+import Patita from "/public/patita.svg";
+import GitHub from "../components/icons/GitHub.astro";
+import { Toggle } from "astro-theme-toggle";
+import Menu2 from "../components/icons/Menu-2.astro";
 
-const navLinks =[
+const navLinks = [
     {
         id: "work",
         href: "/work",
-        name: "Work"
+        name: "Work",
     },
     {
         id: "posts",
         href: "/posts",
-        name: "Posts"
+        name: "Posts",
     },
     {
         id: "wallpapers",
         href: "https://store.craftz.dog",
         name: "Wallpapers",
         rel: "noopener noreferrer",
-        target: "_blank"
+        target: "_blank",
     },
     {
         id: "uses",
         href: "/uses",
-        name: "Uses"
+        name: "Uses",
     },
     {
         id: "source",
@@ -33,10 +33,11 @@ const navLinks =[
         name: "Source",
         rel: "noopener noreferrer",
         target: "_blank",
-        icon: true
-    }
-]
+        icon: true,
+    },
+];
 ---
+
 <header>
     <nav>
         <a class="marker" href="/" aria-label="Home">
@@ -46,30 +47,38 @@ const navLinks =[
 
         <div class="links">
             <ul class="list">
-                {navLinks.map((link) => (
-                    <li id={link.id}>
-                        <a 
-                            rel={link.rel && link.rel} 
-                            target={link.target && link.target} 
-                            class="nav-link" 
-                            href={link.href}
-                            aria-current={link.href === Astro.url.pathname ? 'page' : undefined}
+                {
+                    navLinks.map((link) => (
+                        <li id={link.id}>
+                            <a
+                                rel={link.rel && link.rel}
+                                target={link.target && link.target}
+                                class="nav-link"
+                                href={link.href}
+                                aria-current={
+                                    link.href === Astro.url.pathname
+                                        ? "page"
+                                        : undefined
+                                }
                             >
-                                {link.icon && <GitHub />}
+                                {link.icon && <GitHub class="github-icon" />}
                                 {link.name}
                             </a>
-                    </li>
-                ))}
+                        </li>
+                    ))
+                }
             </ul>
         </div>
 
         <div class="open-buttons">
             <Toggle style="width: 25px; height: 25px;" />
-            <button class="menu-toggle" aria-label="Open Menu"><Menu2 /></button>
+            <button class="menu-toggle" aria-label="Open Menu"><Menu2 /></button
+            >
         </div>
+
+        <div class="page-bg"></div>
     </nav>
 </header>
-<div class="page-bg"></div>
 
 <style>
     header {
@@ -93,7 +102,7 @@ const navLinks =[
         gap: 1.5rem;
         width: min(768px, 100%);
         margin: auto;
-        padding: .3rem;
+        padding: 0.3rem;
     }
 
     .marker {
@@ -103,7 +112,7 @@ const navLinks =[
         display: flex;
         align-items: center;
         font-weight: bold;
-        gap: .2rem;
+        gap: 0.2rem;
     }
 
     .list {
@@ -113,17 +122,17 @@ const navLinks =[
         margin: 0;
     }
 
-    .list li a {
+    .nav-link {
         text-decoration: none;
         color: inherit;
         padding: 5px;
         display: flex;
         align-items: center;
-        gap: .2rem;
+        gap: 0.2rem;
     }
 
-    .list li a:hover {
-      text-decoration: underline;
+    .nav-link:hover {
+        text-decoration: underline;
     }
 
     .icon {
@@ -140,12 +149,10 @@ const navLinks =[
 
     .open-buttons {
         display: flex;
-        gap: .5rem;
+        gap: 0.5rem;
         align-items: center;
         justify-content: center;
     }
-
-
 
     .menu-toggle {
         display: none;
@@ -161,15 +168,23 @@ const navLinks =[
         background-color: rgb(96, 96, 96);
     }
 
+    .github-icon {
+        display: inline-block;
+    }
+
     @media (max-width: 768px) {
         nav {
-            padding: .3rem;
+            padding: 0.3rem;
             margin: 0 auto;
         }
 
         .menu-toggle {
             display: inline-block;
-            z-index: 2;
+            z-index: 3;
+        }
+
+        .links.active .github-icon {
+            display: none;
         }
 
         .links {
@@ -180,14 +195,16 @@ const navLinks =[
             width: 250px;
             border-radius: 10px;
             overflow: hidden;
-            z-index: 1;
             opacity: 0;
             transform: scale(0.95);
-            transition: opacity 0.3s ease, transform 0.3s ease;
+            transition:
+                opacity 0.3s ease,
+                transform 0.3s ease;
             pointer-events: none;
         }
 
         .links.active {
+            z-index: 2;
             opacity: 1;
             transform: scale(1);
             pointer-events: auto;
@@ -200,14 +217,16 @@ const navLinks =[
             width: 100vw;
             height: 100vh;
             background-color: transparent;
-            z-index: 1;
             opacity: 0;
             transform: scale(0.95);
-            transition: opacity 0.3s ease, transform 0.3s ease;
+            transition:
+                opacity 0.3s ease,
+                transform 0.3s ease;
             pointer-events: none;
         }
-        
+
         .page-bg.active {
+            z-index: 1;
             opacity: 1;
             transform: scale(1);
             pointer-events: auto;
@@ -215,24 +234,25 @@ const navLinks =[
 
         .list {
             flex-direction: column;
-            gap: 0.8rem;
-            padding: .5rem;
+            gap: 0;
         }
 
-        .list li a:hover {
+        #work:hover {
             background-color: rgb(65, 75, 92);
             color: white;
+        }
+
+        .nav-link {
+            padding: 10px;
         }
 
         nav {
             flex-wrap: wrap;
         }
     }
-
 </style>
 
 <script>
-
     const menuToggle = document.querySelector(".menu-toggle");
     const links = document.querySelector(".links");
     const pageBg = document.querySelector(".page-bg");
@@ -252,7 +272,7 @@ const navLinks =[
     const navLinks = document.querySelectorAll(".nav-link");
     const currentPath = window.location.pathname;
 
-    navLinks.forEach(link => {
+    navLinks.forEach((link) => {
         if (link.getAttribute("href") === currentPath) {
             link.classList.add("active");
         } else {
