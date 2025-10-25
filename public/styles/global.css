@@ -26,6 +26,7 @@
     --twitter-link-color: #1da1f2;
     --email-link-color: #ff6363;
     --header-active-color: #3d7aed;
+    --header-border-menu: #E2E8F0;
     font-family: "Onest Variable", "Verdana", "Geneva", "Tahoma", "sans-serif";
     text-wrap: balance;
     color-scheme: light dark system;
@@ -50,6 +51,7 @@ html.dark {
     --twitter-link-color: #1da1f2;
     --email-link-color: #ff6363;
     --header-active-color: #3d7aed;
+    --header-border-menu: rgba(255, 255, 255, 0.16);
 }
 
 html {
