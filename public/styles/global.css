@@ -27,7 +27,6 @@
     --email-link-color: #ff6363;
     --header-active-color: #3d7aed;
     --header-border-menu: #E2E8F0;
-    font-family: "Onest Variable", "Verdana", "Geneva", "Tahoma", "sans-serif";
     text-wrap: balance;
     color-scheme: light dark system;
 }
@@ -70,6 +69,7 @@ html::-webkit-scrollbar {
 body {
     background-color: inherit;
     color: inherit;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
 .container {
