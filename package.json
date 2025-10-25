@@ -1,5 +1,5 @@
 {
-  "name": "302found-dev",
+  "name": "302found3v-dotcom",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -9,6 +9,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/react": "^4.4.0",
     "@fontsource-variable/onest": "^5.2.11",
     "astro": "^5.14.1",
     "astro-theme-toggle": "^0.7.0"
