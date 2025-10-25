@@ -9,25 +9,24 @@ const socials = [
     name: "Email",
     icon: Email,
     href: "mailto:jarscode.dev@outlook.com",
-    className: "email"
+    className: "email",
   },
   {
     name: "LinkedIn",
     icon: LinkedIn,
     href: "https://linkedin.com/in/302foundev",
-    className: "linkedin"
+    className: "linkedin",
   },
   {
     name: "Twitter",
     icon: Twitter,
     href: "https://twitter.com/302foundev",
-    className: "twitter"
-  }
+    className: "twitter",
+  },
 ];
 ---
 
 <header class="section">
-
   <div class="hero">
     <span>Hello, I'm a software developer based in Madrid!</span>
   </div>
@@ -40,7 +39,11 @@ const socials = [
 
     <picture>
       <source srcset="/profile.webp" type="image/webp" />
-      <img src="/profile.jpg" loading="eager" alt="Juan Alberto's profile picture" />
+      <img
+        src="/profile.jpg"
+        loading="eager"
+        alt="Juan Alberto's profile picture"
+      />
     </picture>
   </div>
 
@@ -50,20 +53,21 @@ const socials = [
   </div>
 
   <div class="socials">
-    {socials.map((social) => (
-      <a
-        href={social.href}
-        target="_blank"
-        rel="noopener noreferrer"
-        class={social.className}
-        aria-label={`Visit my ${social.name}`}
-      >
-        <social.icon />
-        <span>{social.name}</span>
-      </a>
-    ))}
+    {
+      socials.map((social) => (
+        <a
+          href={social.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          class={social.className}
+          aria-label={`Visit my ${social.name}`}
+        >
+          <social.icon />
+          <span>{social.name}</span>
+        </a>
+      ))
+    }
   </div>
-
 </header>
 
 <style>
@@ -83,7 +87,7 @@ const socials = [
 
   .hero span {
     text-align: center;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     background-color: var(--hero-bg-color);
     font-size: 15px;
     padding: 0.7rem 4rem;
@@ -99,10 +103,6 @@ const socials = [
 
   .craft h1 {
     font-size: 2.3rem;
-  }
-
-  .craft p, .craft h1 {
-    margin: 0;
   }
 
   .craft picture,
@@ -126,7 +126,7 @@ const socials = [
   .socials {
     display: flex;
     align-items: center;
-    gap: .5rem;
+    gap: 0.5rem;
     flex-wrap: wrap;
   }
 
@@ -135,16 +135,18 @@ const socials = [
     height: 20px;
   }
 
-  .email, .linkedin, .twitter {
+  .email,
+  .linkedin,
+  .twitter {
     display: flex;
     align-items: center;
-    gap: .5rem;
+    gap: 0.5rem;
     border: 2px solid var(--hero-bg-color);
-    padding: .3rem .4rem;
-    border-radius: .5rem;
+    padding: 0.3rem 0.4rem;
+    border-radius: 0.5rem;
     text-decoration: none;
     color: inherit;
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
   }
 
   .email:hover {
@@ -188,16 +190,19 @@ const socials = [
       padding: 0.7rem 2rem;
     }
 
-    .socials, .location {
+    .socials,
+    .location {
       margin: auto;
     }
 
     .location {
-      margin-bottom: .5rem;
+      margin-bottom: 0.5rem;
     }
 
-    .email, .linkedin, .twitter {
-      padding: .5rem 1rem;
+    .email,
+    .linkedin,
+    .twitter {
+      padding: 0.5rem 1rem;
     }
   }
 </style>
